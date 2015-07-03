@@ -10,10 +10,16 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'foundation-rails'
+gem 'foundation-icons-sass-rails'
 
 group :development, :test do
   gem 'pry-rails'
   gem 'web-console', '~> 2.0'
   gem 'spring'
+end
+
+group :production do
+
 end
 
