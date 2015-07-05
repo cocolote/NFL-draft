@@ -1,0 +1,26 @@
+#current-team-container {
+  height: 9.3em;
+  overflow: hidden;
+
+  .team-avatar-container {
+    border: 1.5px solid #dd2c00;
+    background-color: #ff6e40;
+    width: 41%;
+    margin: 1px auto 1px auto;
+
+    .team-logo {
+      width: auto;
+      height: 55px;
+      margin: 0.5em;
+      text-align: center;
+    }
+
+    .team-name {
+      font-family: 'Roboto Slab', serif;
+      width: 68%;
+      margin: 0;
+      padding: 0.3em 0 0.3em 0;
+      font-size: 2em;
+    }
+  }
+}

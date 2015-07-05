@@ -15,7 +15,10 @@ namespace :ud do
   task :teams => :environment do
     CSV.foreach("./teams.csv", headers: true, header_converters: :symbol) do |t|
       division = Division. find_or_create_by(name: t[:division])
-      Team.find_or_create_by(name: t[:team_name].rstrip!, division: division)
+      logo_url = "#{t[:team_name].downcase.split.join("-")}.png"
+      Team.find_or_create_by(name: t[:team_name].rstrip!,
+                             logo: logo_url,
+                             division: division)
     end
   end
 

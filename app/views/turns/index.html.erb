@@ -1,20 +1,40 @@
 <section id="current-team-container">
-  <div id="current-team-slider-container">
-    <div class="current-team-avatar-container">
-      <%= image_tag @team.logo, class: "current-team-logo logoname" %>
-      <h2 class="current-team-name logoname"><%= @team.name %></h2>
+  <% @teams.each do |team| %>
+    <div class="team-avatar-container row">
+      <%= image_tag team.logo, class: "team-logo small-1 column" %>
+      <h2 class="team-name small-11 columns"><%= team.name %></h2>
     </div>
-  </div>
+  <% end %>
 </section>
 
 <section id="field">
+  <div id="offence">
+    <% @offence.each do |pos| %>
+      <a href="#">
+        <div id="<%= pos.name.downcase %>" data-id="<%= pos.id %>" class="position"><%= pos.name %></div>
+      </a>
+    <% end %>
+  </div>
+  <div id="defence">
+    <% @defence.each do |pos| %>
+      <a href="#">
+        <div id="<%= pos.name.downcase %>" data-id="<%= pos.id %>" class="position"><%= pos.name %></div>
+      </a>
+    <% end %>
+  </div>
 
 </section>
 
 <section id="last-picks-container">
 
+
 </section>
 
 <section id="players-list-container">
-
+  <% @players.each do |player| %>
+    <div class="player-container row">
+      <h3 class="fi-plus small-1 column"></h3>
+      <h3 class="player-name small-11 columns"><%= player.name %></h3>
+    </div>
+  <% end %>
 </section>

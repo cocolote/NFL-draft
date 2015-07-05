@@ -1,0 +1,27 @@
+#players-list-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 24%;
+  height: 100vh;
+  overflow: auto;
+
+  .player-container {
+    border: 1.5px solid #00c853;
+    background-color: #00e676;
+    margin: 1px 0 1px 0;
+
+    .player-name {
+      width: 90%;
+      color: #444;
+      font-family: 'Roboto Slab', serif;
+      font-size: 1.2em;
+      margin: 0.5em 0 0.5em 0;
+    }
+
+    .fi-plus {
+      color: #76ff03;
+      margin: 0.2em 0 0.2em 0;
+    }
+  }
+}

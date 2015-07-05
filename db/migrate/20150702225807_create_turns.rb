@@ -4,6 +4,7 @@ class CreateTurns < ActiveRecord::Migration
       t.integer :round, null: false
       t.integer :turn, null: false
       t.integer :team_id, null: false
+      t.boolean :used, default: false
 
       t.timestamps null: false
     end

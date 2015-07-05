@@ -48,11 +48,12 @@ ActiveRecord::Schema.define(version: 20150702225807) do
   add_index "teams", ["name"], name: "index_teams_on_name", using: :btree
 
   create_table "turns", force: :cascade do |t|
-    t.integer  "round",      null: false
-    t.integer  "turn",       null: false
-    t.integer  "team_id",    null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "round",                      null: false
+    t.integer  "turn",                       null: false
+    t.integer  "team_id",                    null: false
+    t.boolean  "used",       default: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
 end

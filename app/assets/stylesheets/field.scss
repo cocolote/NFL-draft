@@ -1,0 +1,123 @@
+#field {
+  background-image: url(/assets/football-no-lines.png);
+  background-color: #00c853;
+  width: 50%;
+  height: 28em;
+  margin: 1em auto 1em auto;
+
+  #offence {
+    border: 0.25em solid #fff;
+    height: 14em;
+
+    #rb {
+      top: 27vh;
+      left: 37%;
+    }
+
+    #fb {
+      top: 28vh;
+      left: 49%;
+    }
+
+    #p {
+      top: 27vh;
+      left: 59%;
+    }
+
+    #qb {
+     top: 38vh;
+     left: 49%;
+    }
+
+    #c {
+     top: 48vh;
+     left: 49%;
+    }
+
+    #og {
+     top: 48vh;
+     left: 44%;
+    }
+
+    #ot {
+     top: 48vh;
+     left: 59%;
+    }
+
+    #wr {
+     top: 48vh;
+     left: 28%;
+    }
+
+    #te {
+     top: 46vh;
+     left: 63%;
+    }
+  }
+
+  #defence {
+    border: 0.25em solid #fff;
+    height: 14em;
+
+    div {
+      background-color: #26a69a;
+    }
+
+    #fs {
+      bottom: 4em;
+      left: 37%;
+    }
+
+    #k {
+      bottom: 7em;
+      left: 49%;
+    }
+
+    #ss {
+      bottom: 4em;
+      left: 59%;
+    }
+
+    #ls {
+      bottom: 4em;
+      left: 64%;
+    }
+
+    #ilb {
+      bottom: 10em;
+      left: 39%;
+    }
+
+    #olb {
+      bottom: 10em;
+      left: 59%;
+    }
+
+    #de {
+      bottom: 13em;
+      left: 49%;
+    }
+
+    #dt {
+      bottom: 13em;
+      left: 44%;
+    }
+
+    #cb {
+      bottom: 13em;
+      left: 28%;
+    }
+  }
+
+  .position {
+    position: absolute;
+    background-color: #ff6e40;
+    color: #fff;
+    text-align: center;
+    border: 2px solid #444;
+    border-radius: 100%;
+    width: 3em;
+    height: 3em;
+    padding: 0.6em;
+  }
+}
