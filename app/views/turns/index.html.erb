@@ -1,8 +1,8 @@
 <section id="current-team-container">
-  <% @teams.each do |team| %>
-    <div class="team-avatar-container row">
-      <%= image_tag team.logo, class: "team-logo small-1 column" %>
-      <h2 class="team-name small-11 columns"><%= team.name %></h2>
+  <% @turns.each do |turn| %>
+    <div id="<%= turn.id %>" class="team-avatar-container row" data-team-id="<%= turn.team.id %>">
+      <%= image_tag turn.team.logo, class: "team-logo small-1 column" %>
+      <h2 class="team-name small-11 columns"><%= turn.team.name %></h2>
     </div>
   <% end %>
 </section>
@@ -26,15 +26,36 @@
 </section>
 
 <section id="last-picks-container">
+  <div class="division-container">
 
+  </div>
+  <div class="division-container">
 
+  </div>
+  <div class="division-container">
+
+  </div>
+  <div class="division-container">
+
+  </div>
 </section>
 
 <section id="players-list-container">
   <% @players.each do |player| %>
-    <div class="player-container row">
-      <h3 class="fi-plus small-1 column"></h3>
-      <h3 class="player-name small-11 columns"><%= player.name %></h3>
-    </div>
+
+    <% if player.team %>
+      <% deact = "deactivated" %>
+      <% icon = "fi-x" %>
+    <% else %>
+      <% deact = "" %>
+      <% icon = "fi-plus" %>
+    <% end %>
+
+    <a href="#">
+      <div class="player-container row <%= deact %>" id="pcont-<%= player.id %>" data-player-id="<%= player.id %>">
+        <h3 id="player-<%= player.id %>" class="<%= icon %> small-1 column"></h3>
+        <h3 class="player-name small-11 columns"><%= player.name %></h3>
+      </div>
+    </a>
   <% end %>
 </section>

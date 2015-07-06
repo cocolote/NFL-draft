@@ -23,5 +23,16 @@
       color: #76ff03;
       margin: 0.2em 0 0.2em 0;
     }
+
+    .fi-x {
+      color: #dd2c00;
+      margin: 0.2em 0 0.2em 0;
+    }
+  }
+
+  .deactivated {
+    border: 1.5px solid #777;
+    background-color: #aaa;
+    opacity: 0.4
   }
 }

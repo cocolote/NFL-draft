@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   root 'turns#index'
 
+  resources :turns, only: [:update]
+  resources :positions, only: [:show]
+
   #   get 'products/:id' => 'catalog#view'
 
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

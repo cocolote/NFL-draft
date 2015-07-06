@@ -7,6 +7,7 @@
     background-color: #ff6e40;
     width: 41%;
     margin: 1px auto 1px auto;
+    opacity: 0.2;
 
     .team-logo {
       width: auto;
@@ -22,5 +23,9 @@
       padding: 0.3em 0 0.3em 0;
       font-size: 2em;
     }
+  }
+
+  .current {
+    opacity: 1;
   }
 }
