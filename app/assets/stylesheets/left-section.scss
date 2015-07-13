@@ -1,0 +1,98 @@
+#left-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 24%;
+
+  #logo {
+    background-color: #ad4700;
+    border-radius: 100%;
+    width: 10em;
+    height: 10em;
+    border: 7px solid #444;
+    margin: 0.2em auto 0 auto;
+
+    #nfl-logo {
+      font-family: 'Roboto Slab', serif;
+      color: #ffd54f;
+      font-weight: bold italic;
+      text-shadow: 5px 5px 10px #444;
+      text-align: center;
+      font-size: 3em;
+      margin: 0.2em 0;
+      padding: 0;
+    }
+
+    #draft-logo {
+      font-family: 'Lobster', cursive;
+      letter-spacing: 0.2em;
+      color: #fff;
+      text-align: center;
+      text-shadow: 5px 5px 10px #444;
+      margin: -0.5em 0;
+      padding: 0;
+    }
+  }
+
+  #round-turn-container {
+    background-color: #333;
+    width: 90%;
+    margin-top: 3em;
+    margin-bottom: 3.5em;
+
+    .round-container {
+      border-right: 5px dotted #fff;
+      border-bottom: 5px solid #fff;
+    }
+
+    .turn-container {
+      border-bottom: 5px solid #fff;
+    }
+
+    #turn, #round, .title {
+      color: #fff;
+      font-family: 'Roboto Slab', serif;
+      text-align: center;
+    }
+  }
+
+  #last-moves-label {
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    color: #777;
+    text-shadow: 1.5px 1.5px 0 #fff;
+  }
+
+  #last-players-selected-container{
+    border: 7px solid #fff;
+    padding: 0;
+
+    ul {
+      list-style: none;
+      margin: 0;
+
+      .player-team-container {
+        background-color: #26a69a;
+        border: 1px solid #444;
+        margin: 1px 0 1px 0;
+        padding-left: 2px;
+        height: 3em;
+
+        .last-added-players {
+          margin: 0.5em 0 0 0;
+          padding: 0;
+          width: 78.5%;
+          color: #333;
+        }
+
+        .last-added-team {
+          width: 20%;
+          height: 2.3em;
+          padding: 0;
+          margin: 3px 2px 0;
+        }
+      }
+    }
+  }
+}

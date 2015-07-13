@@ -4,6 +4,7 @@ class TurnsController < ApplicationController
   def index
     @turns = Turn.where(used: false)
     @players = Player.all.order(:name)
+    @last_added_players = Player.where.not(team: nil).order(updated_at: :desc).limit(3)
     @offence, @defence = Position.positions
   end
 

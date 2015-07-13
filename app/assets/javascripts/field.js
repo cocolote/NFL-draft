@@ -7,7 +7,6 @@ $('.position').on('click', function(e) {
 
   getPlayers.done(function(result) {
     var playersHTML = playersListHTML(result.players);
-    debugger;
 
     $('#players-list-container').empty();
     $('#players-list-container').append(playersHTML.join(''));
@@ -20,7 +19,6 @@ function playersListHTML(players) {
   for (var i=0; i < players.length; i++) {
     var deact = '';
     var icon = 'fi-plus';
-    debugger;
     if (players[i].team_id) {
       deact = 'deactivated';
       icon = 'fi-x';

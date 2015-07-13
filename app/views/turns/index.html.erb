@@ -1,6 +1,6 @@
 <section id="current-team-container">
   <% @turns.each do |turn| %>
-    <div id="<%= turn.id %>" class="team-avatar-container row" data-team-id="<%= turn.team.id %>">
+    <div id="<%= turn.id %>" class="team-avatar-container row" data-team-id="<%= turn.team.id %>" data-round="<%= turn.round %>" data-turn="<%= turn.turn %>">
       <%= image_tag turn.team.logo, class: "team-logo small-1 column" %>
       <h2 class="team-name small-11 columns"><%= turn.team.name %></h2>
     </div>
@@ -25,18 +25,35 @@
 
 </section>
 
-<section id="last-picks-container">
-  <div class="division-container">
-
+<section id="left-section">
+  <div id="logo">
+    <h1 id="nfl-logo">NFL</h1>
+    <h2 id="draft-logo">Draft</h2>
   </div>
-  <div class="division-container">
 
+  <div id="round-turn-container" class="row">
+    <div class="round-container small-6 columns">
+      <h1 id="round"></h1>
+      <h3 class="title">Round</h3>
+    </div>
+    <div class="turn-container small-6 columns">
+      <h1 id="turn"></h1>
+      <h3 class="title">Turn</h3>
+    </div>
   </div>
-  <div class="division-container">
 
-  </div>
-  <div class="division-container">
-
+  <h2 id="last-moves-label">Last moves</h2>
+  <div id="last-players-selected-container">
+    <% if @last_added_players %>
+    <ul id="players-teams-list">
+      <% @last_added_players.each do |player| %>
+      <li class="player-team-container row">
+        <p class="last-added-players small-10 columns"><%= player.name %></p>
+        <%= image_tag player.team.logo, class: "last-added-team small-2 columns" %>
+      </li>
+      <% end %>
+    </ul>
+    <% end %>
   </div>
 </section>
 
